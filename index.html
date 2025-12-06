@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Julian Jr. & Sarah Jean – Wedding Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --primary: #7996c5;   /* dusty blue */
+      --primary-dark: #566f9a;
+      --text-main: #33343a;
+      --text-soft: #6b6d73;
+      --border-soft: #dde2f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 248, 251, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-brand {
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.3rem;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      padding-bottom: 0.1rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--primary);
+    }
+
+    /* HERO / SAVE THE DATE */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem 4rem;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* 🔹 HERO IMAGE – palitan ang filename ng pre-nup / save the date photo */
+      background: linear-gradient(120deg, rgba(22, 32, 53, 0.3), rgba(255, 255, 255, 0.15)),
+                  url("img1.jpg") center/cover no-repeat;
+      filter: brightness(0.9);
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.7), transparent 55%);
+      z-index: -1;
+    }
+
+    .hero-card {
+      max-width: 640px;
+      text-align: center;
+      color: #ffffff;
+      padding: 2.8rem 2.2rem;
+      border-radius: 1.8rem;
+      background: rgba(10, 15, 30, 0.45);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-save {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(2.3rem, 6vw, 3.2rem);
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-subtag {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      opacity: 0.9;
+    }
+
+    .hero-names {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.6rem, 4.6vw, 2.1rem);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-date {
+      font-size: 0.95rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .hero-location {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .hero-countdown {
+      margin-top: 1.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .count-item {
+      min-width: 70px;
+      padding: 0.5rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.5);
+      background: rgba(8, 12, 26, 0.5);
+      font-size: 0.75rem;
+    }
+
+    .count-number {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .count-label {
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .section {
+      padding: 3rem 0 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-title h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .section-title p {
+      margin-top: 0.3rem;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 1.4rem;
+      border: 1px solid var(--border-soft);
+      padding: 2rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .two-col {
+      display: grid;
+      gap: 1.8rem;
+    }
+
+    @media (min-width: 800px) {
+      .two-col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .muted {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: var(--border-soft);
+      margin: 1.3rem auto 2rem;
+      position: relative;
+    }
+
+    .divider::after {
+      content: "✧";
+      position: absolute;
+      top: -0.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.85rem;
+      color: var(--primary);
+      background: var(--bg);
+      padding: 0 0.5rem;
+    }
+
+    /* Invitation text */
+    .invite-script {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.1rem;
+    }
+
+    .invite-names {
+      font-family: "Playfair Display", serif;
+      font-size: 2.3rem;
+    }
+
+    .invite-small {
+      font-size: 0.9rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 0.7rem;
+    }
+
+    .invite-maintext {
+      margin-top: 1.6rem;
+      font-size: 0.95rem;
+    }
+
+    .invite-block {
+      margin-top: 1.3rem;
+      font-size: 0.95rem;
+    }
+
+    .invite-block strong {
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    /* Entourage */
+    .entourage-columns {
+      display: grid;
+      gap: 2.2rem;
+    }
+
+    @media (min-width: 900px) {
+      .entourage-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .entourage-group {
+      margin-bottom: 1.6rem;
+    }
+
+    .entourage-heading {
+      font-family: "Great Vibes", cursive;
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .entourage-subheading {
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.4rem;
+    }
+
+    .entourage-list {
+      font-size: 0.9rem;
+    }
+
+    .entourage-list span {
+      display: inline-block;
+      min-width: 12px;
+    }
+
+    /* Details / Attire / RSVP */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .palette {
+      margin-top: 0.7rem;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      margin-right: 6px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .dot-black { background: #000000; }
+    .dot-beige-1 { background: #d7c8a8; }
+    .dot-beige-2 { background: #cebfa4; }
+    .dot-blue-1 { background: #6fa8dc; }
+    .dot-blue-2 { background: #9ec5eb; }
+    .dot-blue-3 { background: #b7d6f2; }
+    .dot-blue-4 { background: #cde3f7; }
+
+    .rsvp-note {
+      font-size: 0.9rem;
+      margin-top: 0.7rem;
+    }
+
+    /* Location / Timeline */
+    .qr-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 700px) {
+      .qr-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .qr-label {
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--text-soft);
+    }
+
+    .timeline {
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .timeline-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 0.7rem;
+    }
+
+    .timeline-item {
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .timeline-time {
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--text-soft);
+    }
+
+    /* Snap & Share / Reminders */
+    .share-reminders {
+      display: grid;
+      gap: 1.2rem;
+      margin-top: 1.6rem;
+    }
+
+    @media (min-width: 700px) {
+      .share-reminders {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    .script-small {
+      font-family: "Great Vibes", cursive;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem 2rem;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+
+    footer .names {
+      font-family: "Great Vibes", cursive;
+      font-size: 1.6rem;
+      color: var(--primary-dark);
+    }
+
+    /* Animations – scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.9s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav">
+      <div class="nav-brand">Julian & Sarah Jean</div>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#invitation">Invitation</a>
+        <a href="#entourage">Entourage</a>
+        <a href="#details">Details</a>
+        <a href="#location">Location</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO / SAVE THE DATE -->
+  <section class="hero reveal" id="hero">
+    <div class="hero-card">
+      <div class="hero-save">Save the Date</div>
+      <div class="hero-subtag">To celebrate the wedding of</div>
+      <div class="hero-names">Julian Jr. &amp; Sarah Jean</div>
+      <div class="hero-date">January 16th, 2026</div>
+      <div class="hero-location">Sta. Maria, Bulacan</div>
+
+      <!-- COUNTDOWN -->
+      <div class="hero-countdown">
+        <div class="count-item">
+          <span class="count-number" id="days">0</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="count-item">
+          <span class="count-number" id="hours">0</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="count-item">
+          <span class="count-number" id="minutes">0</span>
+          <span class="count-label">Minutes</span>
+        </div>
+        <div class="count-item">
+          <span class="count-number" id="seconds">0</span>
+          <span class="count-label">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- INVITATION TEXT -->
+    <section class="section reveal" id="invitation">
+      <div class="section-title">
+        <h2>The Invitation</h2>
+        <p>All the details for the big day</p>
+      </div>
+
+      <div class="card">
+        <p class="invite-script">Together with their families</p>
+
+        <!-- <div class="divider"></div> -->
+
+        <div style="text-align:center;">
+          <div class="invite-names">Julian Jr.</div>
+          <div class="invite-small">and</div>
+          <div class="invite-names" style="margin-top:0.5rem;">Sarah Jean</div>
+        </div>
+
+        <p class="invite-maintext" style="text-align:center;">
+          invite you to celebrate their wedding on
+        </p>
+
+        <div class="invite-block" style="text-align:center;">
+          <strong>16th January 2026</strong><br />
+          Friday at 1 o’ clock in the afternoon
+        </div>
+
+        <div class="invite-block" style="text-align:center; margin-top:1.4rem;">
+          <strong>Parokya ni San Gabriel Arkanghel</strong><br />
+          San Gabriel, Sta. Maria, Bulacan
+        </div>
+
+        <div class="invite-block" style="text-align:center; margin-top:1.4rem;">
+          <span class="invite-script" style="font-size:1.4rem;">Reception to follow</span><br />
+          <strong>Grace Harbour Pavilion, 3:00 PM</strong><br />
+          Gov. F. Halili Ave., Bagbaguin, Sta. Maria, Bulacan
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTOURAGE -->
+    <section class="section reveal" id="entourage">
+      <div class="section-title">
+        <h2>Entourage</h2>
+        <p>Those who will stand beside us</p>
+      </div>
+
+      <div class="card">
+        <h3 style="text-align:center; font-family:'Great Vibes', cursive; font-size:2rem; margin-bottom:0.2rem;">
+          Nonato – Bongcayao
+        </h3>
+        <p class="muted" style="text-align:center; letter-spacing:0.22em; text-transform:uppercase; font-size:0.8rem;">
+          Entourage
+        </p>
+
+        <!-- <div class="divider"></div> -->
+
+        <div class="entourage-columns">
+          <!-- Column 1 -->
+          <div>
+            <div class="entourage-group">
+              <div class="entourage-subheading">Parents of the Groom</div>
+              <div class="entourage-list">
+                MR. JULIAN A. NONATO<br />
+                MRS. MERLY V. NONATO
+              </div>
+            </div>
+			
+			          <div>
+            <div class="entourage-group">
+              <div class="entourage-subheading">Parents of the Bride</div>
+              <div class="entourage-list">
+                MR. BELINO V. BONGCAYAO<br />
+                MRS. MARIETTA C. BONGCAYAO
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-subheading">Principal Sponsors</div>
+              <div class="entourage-list">
+                MR. ADRIAN G. ALMODOVAR<br />
+                MR. TOFFEE M. DELICA<br />
+                MR. CARLITO C. VALDEZ<br />
+                MR. NELSON V. BITOIN<br />
+                MR. WALDEMAR N. VERDERA<br />
+                MR. RANDY LLAGAS<br />
+                MR. ADAM B. BREBONERIA<br />
+                MR. PIO B. CABRERA<br />
+                KAP. DANTE C. SOTTO<br />
+                MR. ROMMEL V. BRIONES<br />
+                MR. ROBERTO DALUDADO
+              </div>
+            </div>
+			
+			 <div class="entourage-group">
+              <div class="entourage-subheading">Principal Sponsors</div>
+              <div class="entourage-list">
+                MRS. EVANGELINE R. ALBERTO<br />
+                MRS. SHIRLEY S. COSTELO<br />
+                MRS. JOJE C. BEDAYO<br />
+                MRS. ELENA M. KABIGTING<br />
+                MRS. CHONA V. ESPEJO<br />
+                MRS. LUZ B. MAHAGUAY<br />
+                MS. MARIFLOR V. BONGCAYAO<br />
+                MRS. FRANCIA C. LEGAPI<br />
+                MRS. CHONA B. VENNEMMAN<br />
+                MRS. ANNALISA B. ESPARES<br />
+                MRS. MARIA THERESA B. TAN
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-subheading">Secondary Sponsor</div>
+              <span class="entourage-heading">Best Man</span><br />
+              JHOMARY NONATO
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+
+
+           
+
+            <div class="entourage-group">
+              <div class="entourage-subheading">Secondary Sponsor</div>
+              <span class="entourage-heading">Maid of Honor</span><br />
+              SHARLYN BONGCAYAO
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="divider"></div> -->
+
+        <!-- SECOND ENTOURAGE PAGE (LIGHT OUR PATH, etc.) -->
+        <div class="entourage-columns">
+          <div>
+            <div class="entourage-group">
+              <div class="entourage-heading">To light our path</div>
+              <div class="entourage-list">
+                BILRON JOHNFRYLE BONGCAYAO<br />
+                JASMIN FULGAR
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">To clothe us as one</div>
+              <div class="entourage-list">
+                JHOMER NONATO<br />
+                GERALDINE NONATO
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Groomsmen</div>
+              <div class="entourage-list">
+                DENNIS NONATO<br />
+                MARK JORDAN PALENCIA<br />
+                PHILIP VINCENT BATAC<br />
+                VINCENT QUEZING<br />
+                JOSELITO HUBILLA<br />
+                JP VERDERA
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Little Groom</div>
+              <div class="entourage-list">
+                JULIAN LUCAS NONATO
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Bible Bearer</div>
+              <div class="entourage-list">
+                GIANNIS BONGCAYAO
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Banner Bearer</div>
+              <div class="entourage-list">
+                JOAQUIN LUIS NONATO WITH HAZEL BONGCAYAO
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="entourage-group">
+              <div class="entourage-heading">To bind us together</div>
+              <div class="entourage-list">
+                JONAS BONGCAYAO<br />
+                RACHELLE ANN PRADO
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Bridesmaids</div>
+              <div class="entourage-list">
+                ESMERALDA NONATO<br />
+                RUVILYN MALLILIM<br />
+                KRISLA BONGCAYAO<br />
+                CHIQUI ACOSTA<br />
+                MA. NYMPHA BONSOL<br />
+                EVELYN CAMITOC
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Little Bride</div>
+              <div class="entourage-list">
+                KENDRA STACEY PALENCIA
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Ring Bearer</div>
+              <div class="entourage-list">
+                GJ NONATO
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Coin Bearer</div>
+              <div class="entourage-list">
+                ANGHEL ROMEO NONATO
+              </div>
+            </div>
+
+            <div class="entourage-group">
+              <div class="entourage-heading">Flower Girls</div>
+              <div class="entourage-list">
+                IRISH DIANNE NONATO<br />
+                MIA AMBER PALENCIA<br />
+                SAMANTHA LAURENTE &amp; GIO NONATO<br />
+                SABRINA LAURENTE &amp; JCHRIST NONATO
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS: ATTIRE, RSVP, GIFT NOTE -->
+    <section class="section reveal" id="details">
+      <div class="section-title">
+        <h2>Wedding Details</h2>
+        <p>Attire, RSVP, and gift information</p>
+      </div>
+
+      <div class="two-col">
+        <!-- Attire summary card -->
+        <div class="card">
+          <h3>Attire</h3>
+
+          <p><strong>Principal Sponsors</strong></p>
+          <p class="muted">
+            <strong>Ninong</strong> – Black coat and tie &amp; black pants
+          </p>
+          <div class="palette">
+            <span class="dot dot-black"></span>
+          </div>
+
+          <p class="muted" style="margin-top:0.8rem;">
+            <strong>Ninang</strong> – Long gown (beige or nude color)
+          </p>
+          <div class="palette">
+            <span class="dot dot-beige-1"></span>
+            <span class="dot dot-beige-2"></span>
+          </div>
+
+          <div style="margin-top:1.5rem;">
+            <p><strong>Guests</strong></p>
+            <p class="muted">
+              Gentlemen – Polo short sleeve or longsleeve and slacks pants<br />
+              Ladies – Semi-formal dress, long dress, midi dress or jumpsuit
+            </p>
+          </div>
+
+          <p class="muted" style="margin-top:1rem; font-style:italic; font-size:0.85rem;">
+            Kindly follow the color motif. Strictly no maong pants.<br />
+            Pastel light blue – strictly no other color.
+          </p>
+
+          <div class="palette" style="margin-top:0.6rem;">
+            <span class="dot dot-blue-1"></span>
+            <span class="dot dot-blue-2"></span>
+            <span class="dot dot-blue-3"></span>
+            <span class="dot dot-blue-4"></span>
+          </div>
+
+          <div style="margin-top:1.6rem;">
+            <span class="pill">Adult-only celebration</span>
+          </div>
+        </div>
+
+        <!-- RSVP / Gift Note -->
+        <div class="card">
+          <h3>RSVP</h3>
+          <p class="rsvp-note">
+            We have reserved ______ seat/s for you. As much as we want to celebrate with everybody, unfortunately, we can only accommodate a limited number of guests due to budget restriction.
+          </p>
+          <p class="rsvp-note">
+            <strong>No RSVP – No SEAT.</strong> We can't allow extra plus ones.
+          </p>
+
+          <p class="rsvp-note">
+            We request the favor of your response on or before <strong>January 4, 2026</strong>.<br />
+            Facebook account: <strong>Julian Jr Nonato &amp; Sarah Jean Bongcayao</strong>
+          </p>
+
+          <!-- 🔹 Optional: ilagay mo dito yung link ng Google Form kung meron -->
+          <!-- <a class="pill" href="https://forms.gle/your-form" target="_blank">RSVP Online</a> -->
+
+          <div class="divider" style="margin-top:1.8rem; margin-bottom:1.4rem;"></div>
+
+          <h3>Gift Note</h3>
+          <p class="muted">
+            With all that we have, we've been truly blessed. Your presence and prayers are all that we request, but if you desire to give nonetheless, a monetary gift is one we suggest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION, QR CODES, KIDS POLICY, TIMELINE, HASHTAG -->
+    <section class="section reveal" id="location">
+      <div class="section-title">
+        <h2>Location &amp; Guide</h2>
+        <p>How to get there and what to expect</p>
+      </div>
+
+      <div class="card">
+        <h3 style="text-align:center;">Location Guide</h3>
+        <p class="muted" style="text-align:center; margin-bottom:1.3rem;">
+          Please scan the QR code for directions.
+        </p>
+
+        <div class="qr-grid">
+          <div style="text-align:center;">
+            <!-- 🔹 QR CODE – Church -->
+            <!-- Palitan ang filename ng QR image ng simbahan -->
+            <img src="churchqrf.png" alt="Church QR Code" style="max-width:220px;margin:0 auto;">
+            <div class="qr-label">Church</div>
+          </div>
+          <div style="text-align:center;">
+            <!-- 🔹 QR CODE – Venue -->
+            <!-- Palitan ang filename ng QR image ng reception venue -->
+            <img src="venueqrf.png" alt="Venue QR Code" style="max-width:220px;margin:0 auto;">
+            <div class="qr-label">Venue</div>
+          </div>
+        </div>
+
+        <!-- <div class="divider"></div>-->
+
+        <h3 style="text-align:center; font-family:'Great Vibes', cursive; font-size:1.8rem;">Can I bring kids?</h3>
+        <p class="muted" style="text-align:center; max-width:640px; margin:0.4rem auto 0;">
+          Children are really adorable but our event is an adult-event only. We kindly request
+          a child-free wedding. Only children who are part of the entourage are included in both
+          ceremony and reception.
+        </p>
+
+        <!-- Wedding Timeline -->
+        <div class="timeline">
+          <h3 style="text-align:center;">Wedding Timeline</h3>
+          <p class="muted" style="text-align:center; font-size:0.85rem; margin-bottom:1rem;">
+            (Times are approximate – please arrive early.) 
+          </p>
+
+          <div class="timeline-row">
+            <div class="timeline-item">
+              <!-- 🔹 Optional icon: ceremony-rings.png -->
+              <!-- <img src="timeline-rings.png" alt="" style="height:40px;margin:0 auto 0.3rem;"> -->
+              <div class="tag">Ceremony</div>
+              <div class="timeline-time">1:00 PM</div>
+            </div>
+            <div class="timeline-item">
+              <!-- <img src="timeline-camera.png" alt="" style="height:40px;margin:0 auto 0.3rem;"> -->
+              <div class="tag">Photos</div>
+              <div class="timeline-time">3:30 PM</div>
+            </div>
+            <div class="timeline-item">
+              <!-- <img src="timeline-snacks.png" alt="" style="height:40px;margin:0 auto 0.3rem;"> -->
+              <div class="tag">Snacks</div>
+              <div class="timeline-time">4:00 PM</div>
+            </div>
+            <div class="timeline-item">
+              <!-- <img src="timeline-dinner.png" alt="" style="height:40px;margin:0 auto 0.3rem;"> -->
+              <div class="tag">Dinner</div>
+              <div class="timeline-time">6:00 PM</div>
+            </div>
+            <div class="timeline-item">
+              <!-- <img src="timeline-dance.png" alt="" style="height:40px;margin:0 auto 0.3rem;"> -->
+              <div class="tag">Program</div>
+              <div class="timeline-time">7:30 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Snap & Share + Reminders -->
+        <div class="share-reminders">
+          <div>
+            <div class="script-small">Snap &amp; Share</div>
+            <p class="muted">
+              Help us document our special day by sharing our captured moments using our official hashtag:
+            </p>
+            <p style="margin-top:0.5rem; font-weight:600;">
+              #itSARAhghtTimeToMarryWithJULIAN
+            </p>
+          </div>
+
+          <div>
+            <div class="script-small">Reminders</div>
+            <p class="muted">
+              BE ON TIME<br />
+              FINISH THE EVENT<br />
+              ENJOY AND HAVE FUN
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="reveal">
+    With love,<br />
+    <span class="names">Julian Jr. &amp; Sarah Jean</span><br />
+    <span style="font-size:0.8rem;">See you on our special day.</span>
+  </footer>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Countdown Script -->
+  <script>
+    // 🔹 Baguhin lang kung mag-iiba ang date / oras
+    const weddingDate = new Date("2026-01-16T13:00:00+08:00");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate.getTime() - now;
+
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      if (distance <= 0) {
+        daysEl.textContent = "0";
+        hoursEl.textContent = "0";
+        minutesEl.textContent = "0";
+        secondsEl.textContent = "0";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.textContent = days;
+      hoursEl.textContent = hours;
+      minutesEl.textContent = minutes;
+      secondsEl.textContent = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
